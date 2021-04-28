@@ -24,8 +24,6 @@ with open('home.html', 'r') as html_file:   # r is read only
     # print(course_cards)
     for course in course_cards:
         course_name = course.h5.text
-        course_price = course.a.text
+        course_price = course.a.text.split()[-1]
 
-        print(course_name)
-        print(course_price)
-        print()
+        print(f"{course_name} costs {course_price}")
