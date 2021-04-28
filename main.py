@@ -23,9 +23,9 @@ with open('home.html', 'r') as html_file:   # r is read only
     course_cards = soup.find_all('div', class_='card')
     # print(course_cards)
     for course in course_cards:
-        course_name = course.h5
-        course_price = course.a
+        course_name = course.h5.text
+        course_price = course.a.text
 
-        print(course_name.text)
-        print(course_price.text)
+        print(course_name)
+        print(course_price)
         print()
