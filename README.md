@@ -28,4 +28,3 @@ This Project show how to scrap a web site for
 	- dataframe for machine learning, nlp
 	- database for presisted data
 
-freecodecamp Web Scraping with Python - Beautiful Soup Crash Course 
