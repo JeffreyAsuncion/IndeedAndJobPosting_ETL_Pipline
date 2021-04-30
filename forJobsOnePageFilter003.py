@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 
+
+
 # Next steps try with multiple unfamiliar skills
 print("Put some skill that you are not familiar with.") 
 unfamiliar_skill = input("> ") 
