@@ -37,7 +37,7 @@ def find_jobs():
                 print(f"Required Skills: {skills.strip()}")
                 print(f"More Info: {more_info}")
                 print("~" * 20)
-                cursor.execute("INSERT INTO jobslist VALUES(%s, %s, %s)" % (company_name.strip(), skills.strip(), more_info))
+                cursor.execute("INSERT INTO jobslist VALUES(?, ?, ?)" , (company_name.strip(), skills.strip(), more_info))
                 conn.commit()
     
     conn.close()
