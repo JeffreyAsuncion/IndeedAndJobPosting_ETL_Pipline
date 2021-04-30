@@ -7,6 +7,7 @@ conn = sqlite3.connect('jobslist.db')
 
 cursor = conn.cursor()
 sql="""CREATE TABLE jobslist (
+        date_pulled DATE,
         job_post TEXT,
         description TEXT,
         link TEXT
@@ -14,4 +15,4 @@ sql="""CREATE TABLE jobslist (
 cursor.execute(sql)
 
 cursor.commit()
-cursor.close()()
+cursor.close()
