@@ -1,5 +1,3 @@
-from datetime import datetime
-
 class Job:
 
     def __init__(self, date_pulled, post, description, link):
