@@ -17,7 +17,7 @@ to make web request
 Purpose : Create an ETL that will scrape a website for Jobs Posting and store in a SQLite3 Database 
 
 JobPost000.py : demo pulling data from a static website
-JobPost001.py : jobs on a job site & get additional info for each job (skills, info)
+JobPost001.py : one job on a job site & get additional info for each job (skills, info)
 JobPost002.py : get the most recent job posts
 JobPost003.py : filter out an unfamilar skill
 JobPost004.py : automatic on a timer
