@@ -10,7 +10,6 @@ print(f"Filtering out {unfamiliar_skill}")
 
 def find_jobs():
     html_text = requests.get('https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=python&txtLocation=').text
-    # print(html_text)
 
     soup = BeautifulSoup(html_text, 'lxml')
     jobs = soup.find_all('li', class_ = 'clearfix job-bx wht-shd-bx')
@@ -32,6 +31,7 @@ def find_jobs():
                     f.write(f"More Info: {more_info} \n")
                     f.write("~" * 20)
                 print(f'File saved: {index}')
+
 
 if __name__ == '__main__':
     while True:
