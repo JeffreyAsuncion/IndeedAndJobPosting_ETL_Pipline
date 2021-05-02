@@ -22,26 +22,19 @@ def transform(soup):
             salary = item.find('span', class_ = 'salaryText').text.strip()
         except:
             salary = 'Not Available'
-        summary = item.find('div', {'class' : 'summary'}).text.strip().replace('\n', '')
+        summary = item.find('div', {'class' : 'summary'}).text.strip()
 
-        job = {
-            'title' : title,
-            'company' : company,
-            'salary' : salary,
-            'summary' : summary
-        }
-
-        joblist.append(job)
-    
+        print(title)
+        print(company)
+        print(salary)
+        print(summary)
+        print("~"*20)
     return
 
-# 16:30
 
 
-joblist = []
 c = extract(0)
 transform(c)
-print(len(joblist))
-print(joblist)
+
 
 
