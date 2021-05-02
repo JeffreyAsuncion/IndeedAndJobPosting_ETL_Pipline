@@ -1,7 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+from sqlalchemy import create_engine
 
+
+engine = create_engine('sqlite:///save_pandas.db', echo=True)
+sqlite_connection = engine.connect()
 
 # known errors
 # . if job_name doesnot return results in indeed Empty data frame is produced
@@ -84,5 +88,6 @@ df.to_csv('jobs.csv')
 
 # how to load
 # https://www.fullstackpython.com/blog/export-pandas-dataframes-sqlite-sqlalchemy.html
-
+sqlite_table = "IndeedJobPosts"
+df.to_sql(sqlite_table, sqlite_connection, if_exists='fail')
 
