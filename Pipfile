@@ -9,6 +9,7 @@ lxml = "*"
 requests = "*"
 SQLAlchemy = "*"
 Flask-SQLAlchemy = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 

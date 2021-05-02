@@ -2,6 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
+
+# known errors
+# . if job_name doesnot return results in indeed Empty data frame is produced
+
+
 def format_str(input_str):
     if len(input_str) == 1:
         return input_str
@@ -36,9 +41,6 @@ def extract(page, job_name="Python Developer", city_name="New York", state_abbr=
     
     return soup
 
-# known errors
-# . if job_name doesnot return results in indeed Empty data frame is produced
-
 
 def transform(soup):
     divs = soup.find_all('div', class_ = 'jobsearch-SerpJobCard')
@@ -64,21 +66,23 @@ def transform(soup):
     return
 
 
+# take dataframe or csv and load to database
+def load():
+    pass
 
 
 joblist = []
 
 for i in range(0, 50, 10): # This loops thru 200/10 pages 20 pages
     print(f"Getting page, {i}")
-    # job_name = "Fudrucker"
     c = extract(i) # will give an error if result has less than 4 pages 
     transform(c)
-    # print(len(joblist))
-    # print(joblist)
 
+# one way to persist the data for ML engineering (NLP)
 df = pd.DataFrame(joblist)
-print(df.head(10))
-print(df.tail(10))
-
 df.to_csv('jobs.csv')
+
+# how to load
+# https://www.fullstackpython.com/blog/export-pandas-dataframes-sqlite-sqlalchemy.html
+
 

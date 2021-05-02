@@ -11,7 +11,8 @@ install a parser
 > pipenv install lxml
 to make web request
 > pipenv install requests
-
+to load to database
+> pipenv install sqlalchemy
 
 
 Purpose : Create an ETL that will scrape a website for Jobs Posting and store in a SQLite3 Database 
