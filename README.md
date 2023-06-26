@@ -1,6 +1,8 @@
 # WebScraping_BeautifulSoup
 Web Scraping with Python and Beautiful Soup
 
+Purpose : Create an ETL that will scrape a website for Jobs Posting and store in a SQLite3 Database 
+
 
 to set up pipenv virtual environment
 ------------------------------------
@@ -15,7 +17,7 @@ to load to database
 > pipenv install sqlalchemy
 
 
-Purpose : Create an ETL that will scrape a website for Jobs Posting and store in a SQLite3 Database 
+
 
 JobPost000.py : demo pulling data from a static website
 JobPost001.py : one job on a job site & get additional info for each job (skills, info)
